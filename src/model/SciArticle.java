@@ -5,7 +5,7 @@ public class SciArticle extends Material{
     protected String vol;
 
     //constructor
-    public SciArticle(String name, String publisher, int publicationYear, String genre, String authors, String type, String vol) {
+    public SciArticle(String name, String publisher, String publicationYear, String genre, String authors, String type, String vol) {
         super(name, publisher, publicationYear, genre, authors, type);
         this.vol = vol;
     }
@@ -15,13 +15,15 @@ public class SciArticle extends Material{
     public String generateAPAReference() {
         return String.format(
             "%s " +
-            "(%d)." +
-            " %s " +
-            "de %s",
+            "(%s)." +
+            " %s" +
+            " %s,"+
+            " %s.",
             this.getAuthors(),
             this.publicationYear,
             this.name,
-            this.publisher
+            this.publisher,
+            this.vol
         );
     }
 

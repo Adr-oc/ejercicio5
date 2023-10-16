@@ -1,5 +1,6 @@
 package model;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -7,7 +8,7 @@ public abstract class Material {
     
     protected String name;
     protected String publisher;
-    protected int publicationYear;
+    protected String publicationYear;
     protected String genre;
     protected String authors;
     protected String type;
@@ -15,7 +16,7 @@ public abstract class Material {
 
 
     //constructor
-    public Material(String name, String publisher, int publicationYear, String genre, String authors, String type) {
+    public Material(String name, String publisher, String publicationYear, String genre, String authors, String type) {
         this.name = name;
         this.publisher = publisher;
         this.publicationYear = publicationYear;
@@ -46,10 +47,10 @@ public abstract class Material {
     }
 
 
-    public int getPublicationYear() {
+    public String getPublicationYear() {
         return publicationYear;
     }
-    public void setPublicationYear(int publicationYear) {
+    public void setPublicationYear(String publicationYear) {
         this.publicationYear = publicationYear;
     }
 
@@ -64,16 +65,19 @@ public abstract class Material {
 
     public String getAuthors() {
         String[] authors = this.authors.split(";");
-        Collections.reverse(Arrays.asList(authors));
+        for (int i = 0; i < authors.length; i++) {
+            authors[i] = authors[i].split(" ")[1]+" "+authors[i].split(" ")[0].substring(0, 1)+"."; 
+        }
+        Collections.sort(Arrays.asList(authors));
         String formattedAuthors = "";
 
         for (int i = 0; i < authors.length; i++) {
             String author = authors[i];
             String[] authorTokens = author.split(" ");
-            String lastName = authorTokens[authorTokens.length - 1];
-            String firstName = authorTokens[0];
-            String initials = firstName.substring(0, 1) + ".";
-            formattedAuthors += lastName + ", " + initials + (i < authors.length - 1 ? ", " : "");
+            String lastName = authorTokens[0];
+            String firstName = authorTokens[1];
+            //String initials = firstName.substring(0, 1) + ".";
+            formattedAuthors += lastName + ", " + firstName + (i < authors.length - 1 ? ", " : "");
         }
 
         return formattedAuthors;

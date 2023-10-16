@@ -8,10 +8,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         Library library = new Library();
         
-        DVD dvd = new DVD("Rocky", "Del Rey", 1979, "Science fiction", "Douglas Adams", "DVD");
+        DVD dvd = new DVD("El padrino", "Paramount", "1973", "Mafia", "Francis Ford Coppola", "DVD");
         library.addMaterial(dvd);
 
-        Book book = new Book("The Nothing Book", "Del Rey", 1979, "Science fiction", "Douglas Adams", "Book");
+        Book book = new Book("The Nothing Book", "Del Rey", "1979", "Science fiction", "Adrian Orantes;Ludwing Cano;Douglas Adams", "Book");
         library.addMaterial(book);
 
         List<Material> materials = library.getCatalog();

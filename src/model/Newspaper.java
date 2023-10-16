@@ -1,8 +1,8 @@
 package model;
 
-public class Book extends Material {
+public class Newspaper extends Material {
     
-    public Book(String name, String publisher, String publicationYear, String genre, String authors, String type) {
+    public Newspaper(String name, String publisher, String publicationYear, String genre, String authors, String type) {
         super(name, publisher, publicationYear, genre, authors, type);
     }
 
