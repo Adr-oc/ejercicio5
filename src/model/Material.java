@@ -1,5 +1,8 @@
 package model;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public abstract class Material {
     
     protected String name;
@@ -60,8 +63,23 @@ public abstract class Material {
 
 
     public String getAuthors() {
-        return authors;
+        String[] authors = this.authors.split(";");
+        Collections.reverse(Arrays.asList(authors));
+        String formattedAuthors = "";
+
+        for (int i = 0; i < authors.length; i++) {
+            String author = authors[i];
+            String[] authorTokens = author.split(" ");
+            String lastName = authorTokens[authorTokens.length - 1];
+            String firstName = authorTokens[0];
+            String initials = firstName.substring(0, 1) + ".";
+            formattedAuthors += lastName + ", " + initials + (i < authors.length - 1 ? ", " : "");
+        }
+
+        return formattedAuthors;
     }
+
+
     public void setAuthors(String authors) {
         this.authors = authors;
     }

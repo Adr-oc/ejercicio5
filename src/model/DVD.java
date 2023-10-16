@@ -1,8 +1,8 @@
 package model;
 
-public class Book extends Material {
-    
-    public Book(String name, String publisher, int publicationYear, String genre, String authors, String type) {
+public class DVD extends Material{
+
+    public DVD(String name, String publisher, int publicationYear, String genre, String authors, String type) {
         super(name, publisher, publicationYear, genre, authors, type);
     }
 
@@ -10,10 +10,10 @@ public class Book extends Material {
     public String generateAPAReference() {
         // Generate the APA reference for a book
         return String.format(
-            "%s " +
-            "(%d)." +
-            " %s " +
-            "de %s",
+            "%s(Director)." +
+            " (%d)." +
+            " %s[Película]." +
+            " %s",
             this.getAuthors(),
             this.publicationYear,
             this.name,
