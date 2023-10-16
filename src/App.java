@@ -3,16 +3,17 @@ import model.Book;
 import model.DVD;
 import model.Library;
 import model.Material;
+import model.Newspaper;
+import model.SciArticle;
+import model.Tesis;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Library library = new Library();
         
-        DVD dvd = new DVD("El padrino", "Paramount", "1973", "Mafia", "Francis Ford Coppola", "DVD");
-        library.addMaterial(dvd);
+        Tesis tesis = new Tesis("The Nothing Book", "Universidad del Valle de Guatemala", "1979", "Science fiction", "Adrian Orantes", "Tesis", true, "https://www.google.com"); 
+        library.addMaterial(tesis);
 
-        Book book = new Book("The Nothing Book", "Del Rey", "1979", "Science fiction", "Adrian Orantes;Ludwing Cano;Douglas Adams", "Book");
-        library.addMaterial(book);
 
         List<Material> materials = library.getCatalog();
         for (Material material : materials) {

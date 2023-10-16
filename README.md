@@ -11,8 +11,6 @@ The workspace contains two folders by default, where:
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
 ## Pending features
-- `Newspaper.java` change `generateAPAReference()`
-- `Tesis.java` change `generateApaReaference()`
 - Keep a count of `materials` by `genre`, `author` and `year of publication` of bibliographic material.
 - Show available catalog with its citations in APA format.
 - `Save` cataloged to a `csv file`
