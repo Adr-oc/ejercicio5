@@ -6,13 +6,13 @@ public class SciArticle extends Material{
 
     //constructors
     //constructor with vol
-    public SciArticle(String name, String publisher, String publicationYear, String genre, String authors, String type, String vol) {
-        super(name, publisher, publicationYear, genre, authors, type);
+    public SciArticle(String type,String name, String publisher, String publicationYear, String genre, String authors, String vol) {
+        super(type,name, publisher, publicationYear, genre, authors);
         this.vol = vol;
     }
     //constructor without vol
-    public SciArticle(String name, String publisher, String publicationYear, String genre, String authors, String type) {
-        super(name, publisher, publicationYear, genre, authors, type);  
+    public SciArticle(String type, String name, String publisher, String publicationYear, String genre, String authors) {
+        super(type,name, publisher, publicationYear, genre, authors);
     }
 
 

@@ -5,13 +5,14 @@ public class Tesis extends Material{
     protected boolean published;
     protected String url;
     
-    public Tesis(String name, String publisher, String publicationYear, String genre, String authors, String type, boolean published, String url) {
-        super(name, publisher, publicationYear, genre, authors, type);
+    //constructors
+    public Tesis(String type, String name, String publisher, String publicationYear, String genre, String authors, boolean published, String url) {
+        super(type,name, publisher, publicationYear, genre, authors);
         this.published = published;
         this.url = url;
     }
-    public Tesis(String name, String publisher, String publicationYear, String genre, String authors, String type, boolean published) {
-        super(name, publisher, publicationYear, genre, authors, type);
+    public Tesis(String type,String name, String publisher, String publicationYear, String genre, String authors, boolean published) {
+        super(type,name, publisher, publicationYear, genre, authors);
         this.published = published;
     }
 
