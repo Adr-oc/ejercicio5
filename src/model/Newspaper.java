@@ -5,13 +5,13 @@ public class Newspaper extends Material {
 
 
     //constructor with url
-    public Newspaper(String name, String publisher, String publicationYear, String genre, String authors, String type,String url) {
-        super(name, publisher, publicationYear, genre, authors, type);
+    public Newspaper(String type,String name, String publisher, String publicationYear, String genre, String authors,String url) {
+        super(type,name, publisher, publicationYear, genre, authors);
         this.url = url;
     }
     //constructor without url
-   public Newspaper(String name, String publisher, String publicationYear, String genre, String authors, String type) {
-        super(name, publisher, publicationYear, genre, authors, type);  
+   public Newspaper(String type,String name, String publisher, String publicationYear, String genre, String authors) {
+    super(type,name, publisher, publicationYear, genre, authors);
     }
 
 

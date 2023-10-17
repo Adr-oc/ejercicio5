@@ -14,7 +14,7 @@ public abstract class Material {
 
 
     //constructor
-    public Material(String name, String publisher, String publicationYear, String genre, String authors, String type) {
+    public Material(String type,String name, String publisher, String publicationYear, String genre, String authors) {
         this.name = name;
         this.publisher = publisher;
         this.publicationYear = publicationYear;
