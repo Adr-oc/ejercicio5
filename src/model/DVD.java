@@ -2,8 +2,8 @@ package model;
 
 public class DVD extends Material{
 
-    public DVD(String type, String name, String publisher, String publicationYear, String genre, String authors) {
-        super(type,name, publisher, publicationYear, genre, authors);
+    public DVD(String name, String publisher, String publicationYear, String genre, String authors, String type) {
+        super(name, publisher, publicationYear, genre, authors, type);
     }
 
     @Override
