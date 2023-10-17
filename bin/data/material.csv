@@ -1,0 +1,8 @@
+Book,The Lord of the Rings,HarperCollins,1954,Fantasy,J.R.R. Tolkien,N/A,N/A
+DVD,The Shawshank Redemption,Warner Bros.,1994,Drama,Frank Darabont,Vol 1,N/A
+Newspaper,The New York Times,The New York Times Company,2023,News,A.G. Sulzberger,https://www.nytimes.com/,N/A
+Newspaper,The Guardian,Guardian Media Group,2023,News,Katharine Viner,N/A,N/A
+SciArticle,The Origin of Species,John Murray,1859,Science,Charles Darwin,https://en.wikipedia.org/wiki/On_the_Origin_of_Species,N/A
+SciArticle,E=mc^2,Annalen der Physik,1905,Science,Albert Einstein,N/A,N/A
+Tesis,A Study on the Effects of Climate Change on the Arctic Ecosystem,University of Alaska Fairbanks,2023,Science,John Smith,true,https://google.com
+Tesis,The Development of a New Algorithm for Machine Learning,Stanford University,2023,Computer Science,Jane Doe,false,N/A
